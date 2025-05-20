@@ -20,7 +20,10 @@ app.use(express.json()); // it is converting json data into js object and it is 
 let server=require("http").createServer(app);
 
 let io=require("socket.io")(server,{cors:{
-  origin:"http://localhost:5173",
+  origin: [
+  "http://localhost:5173",
+  "https://quick-chat-app-fronted-6v56.onrender.com"
+],
   method:['GET','POST']
 }})
 app.use("/api/auth",authRouter);
