@@ -3,7 +3,7 @@ import { axiosInstance } from "./index";
 
 export let signupUser=async (user)=>{
   try{
-    let response=await axiosInstance.post("http://localhost:3000/api/auth/signup",user);
+    let response=await axiosInstance.post("https://quick-chat-app-server-ow9p.onrender.com/api/auth/signup",user);
     return response.data;
   }catch(error){
     return error;
@@ -12,7 +12,7 @@ export let signupUser=async (user)=>{
 
 export let loginUser=async (user)=>{
   try{
-    let response=await axiosInstance.post("http://localhost:3000/api/auth/login",user);
+    let response=await axiosInstance.post("https://quick-chat-app-server-ow9p.onrender.com/api/auth/login",user);
     return response.data;
   }catch(error){
     return error;
