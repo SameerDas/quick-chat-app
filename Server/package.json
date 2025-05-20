@@ -4,7 +4,7 @@
   "description": "real-time chat application",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Sameer Das",
   "license": "ISC",
@@ -19,6 +19,6 @@
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.10"
   }
 }
