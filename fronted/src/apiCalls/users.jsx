@@ -11,7 +11,7 @@ export let getLoggedUser=async()=>{
 
 export let getAllUsers=async()=>{
   try{
-    let response=await axiosInstance.get("https://quick-chat-app-server-ow9p.onrender.com/api/user/get-all-user");
+    let response=await axiosInstance.get("https://quick-chat-app-server-8u1l.onrender.com/api/user/get-all-user");
     return response.data;
   }catch(error){
     return error;
@@ -20,7 +20,7 @@ export let getAllUsers=async()=>{
 
 export let uploadProfilePic=async(image)=>{
   try{
-    let response=await axiosInstance.post("https://quick-chat-app-server-ow9p.onrender.com/api/user/upload-profile-pic",{image});
+    let response=await axiosInstance.post("https://quick-chat-app-server-8u1l.onrender.com/api/user/upload-profile-pic",{image});
     return response.data;
   }catch(error){
     return error;
