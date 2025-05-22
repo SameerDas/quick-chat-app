@@ -3,6 +3,12 @@ let app=express();
 const cors = require("cors");
 let dotenv=require("dotenv");
 dotenv.config({path:"./config.env"});
+let authRouter=require("./controllers/authController");
+let userRouter=require("./controllers/userController");
+let chatRouter=require("./controllers/chatController");
+let messageRouter=require("./controllers/messageController");
+let dbconfig=require("./config/dbConfig");
+
 
 // Allow frontend (http://localhost:5173) to access backend
 app.use(cors({ origin: [
@@ -10,12 +16,13 @@ app.use(cors({ origin: [
   "https://quick-chat-app-fronted-6v56.onrender.com"
 ], credentials: true }));
 
-let authRouter=require("./controllers/authController");
-let userRouter=require("./controllers/userController");
-let chatRouter=require("./controllers/chatController");
-let messageRouter=require("./controllers/messageController");
-let dbconfig=require("./config/dbConfig");
-
+app.options('*', cors({
+  origin: [
+    "http://localhost:5173",
+    "https://quick-chat-app-fronted-6v56.onrender.com"
+  ],
+  credentials: true
+}));
 
 
 // app.use(cors());
